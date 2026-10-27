@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    display: grid;
+   
+    height: 100%;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+        "nav nav"
+        "menu section";
+}
+
+nav{
+    grid-area: nav;
+    background-color: rgb(29, 5, 5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: rgb(161, 83, 16);
+}
+.menu {
+    grid-area: menu;
+    background-color: rgb(68, 32, 32);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+    
+    
+}
+.menu button{
+    border: none;
+    font-size: 1rem;
+    padding: 13px;
+    border-radius: 1rem;
+    cursor:grabbing;
+    
+}
+.menu button:hover{
+color: rgb(0, 37, 247);
+}
+
+section {
+    grid-area: section;
+    background-color: azure;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+section.content {
+    grid-area: section;
+    background-color: azure;
+    padding: 25px;
+    min-width: 0;
+    overflow-y: auto;
+}
+
+/* Andar ke pages */
+.page {
+    display: none;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    min-height: 200px;
+}
+
+/* Jo page active hoga wahi dikhega */
+.page.active {
+    display: block;
+}
+
+/* Page headings */
+.page h2 {
+    margin-bottom: 15px;
+    color: rgb(29, 5, 5);
+    font-size: 1.5rem;
+}
+
+/* Page ka paragraph */
+.page p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+#dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+#dashboard .product-card {
+    width: 250px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+#dashboard .product-card:hover {
+    transform: translateY(-5px);
+}
+
+#dashboard img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+#dashboard h1 {
+    font-size: 20px;
+    color: #222;
+    margin: 12px 0;
+}
+
+#dashboard p {
+    font-size: 16px;
+    color: #555;
+    margin: 8px 0;
+}
+
+#product {
+    grid-area: section;
+    background-color: azure;
+    padding: 20px;
+}
+
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.product-card button {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Categories section */
+#categories {
+    padding: 25px;
+    background-color: #f1f5f9;
+    min-height: 100%;
+}
+
+/* Main heading */
+#categories h1 {
+    color: #1e293b;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+/* Category cards */
+#categories h3 {
+    display: inline-block;
+    background-color: white;
+    color: #263b80;
+    padding: 25px;
+    margin: 10px;
+    min-width: 180px;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* Hover effect */
+#categories h3:hover {
+    background-color: #263b80;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(38, 59, 128, 0.2);
+}
+
+
+/* Brands section */
+#brands {
+    padding: 25px;
+    background-color: #f1f5f9;
+    min-height: 100%;
+}
+
+/* Brands heading */
+#brands h1 {
+    color: #1e293b;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+/* Brand card */
+.brand-card {
+    display: inline-block;
+    width: 180px;
+    margin: 10px;
+    padding: 25px 15px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* Brand name */
+.brand-card h3 {
+    color: #263b80;
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Hover effect */
+.brand-card:hover {
+    background-color: #263b80;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(38, 59, 128, 0.2);
+}
+
+.brand-card:hover h3 {
+    color: white;
+}

@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Odin Inventory</title>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <main>
+        <!-- Top Navigation -->
+        <nav>
+            <h1>Odin_Inventory</h1>
+            <h2>Logout</h2>
+        </nav>
+
+        <!-- Sidebar Menu -->
+        <div class="menu">
+            <button data-page="dashboard">DASHBOARD</button>
+            <button data-page="product">PRODUCT</button>
+            <button data-page="categories">CATEGORIES</button>
+            <button data-page="brands">BRANDS</button>
+        </div>
+
+        <!-- Main Content -->
+        <section class="content">
+
+            <div id="dashboard" class="page active">
+                <h2>Dashboard</h2>
+                <p>Welcome to Odin Inventory!</p>
+            </div>
+
+            <div id="product" class="page">
+                <h2>Products</h2>
+            </div>
+
+            <div id="categories" class="page">
+                <h2>Categories</h2>
+            </div>
+
+            <div id="brands" class="page">
+                <h2>Brands</h2>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- JavaScript file -->
+    <script src="/scripts.js"></script>
+</body>
+</html>
